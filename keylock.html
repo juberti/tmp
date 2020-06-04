@@ -1,7 +1,8 @@
 <html>
 <body>
-<button id="x">Test</button>
-<div id="y" style="display:none">Escape pressed!!</div>
+<button id="x">Enter Fullscreen</button>
+<div style="color: red">This page demonstrates use of the Keyboard Lock API for the Escape key.</div>
+<div id="y" style="color: red;display:none">Escape pressed!!</div>
 <script>
 document.getElementById('x').onclick = () => {
   document.body.requestFullscreen().then(() => {
