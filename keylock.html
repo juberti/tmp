@@ -1,0 +1,25 @@
+<html>
+<body>
+<button id="x">Test</button>
+<div id="y" style="display:none">Escape pressed!!</div>
+<script>
+document.getElementById('x').onclick = {
+  document.body.requestFullscreen()
+  .then(() => {
+      const keys = [{ code: 'Escape' }];
+      navigator.keyboard.lock(keys);
+  });
+  document.onkeydown = (event) => {
+    if (event.code == 'Escape') {
+      document.getElementById('y').style.display = 'block';
+    }
+  };
+  document.onkeyup = (event) => {
+    if (event.code == 'Escape') {
+      document.getElementById('y').style.display = 'none';
+    }
+  };
+}
+</script>
+</body>
+</html>
