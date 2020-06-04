@@ -5,7 +5,7 @@
 <script>
 document.getElementById('x').onclick = () => {
   document.body.requestFullscreen().then(() => {
-    const keys = [{ code: 'Escape' }];
+    const keys = ['Escape'];
     navigator.keyboard.lock(keys);
   });
   document.onkeydown = (event) => {
