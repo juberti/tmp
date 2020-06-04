@@ -3,7 +3,7 @@
 <button id="x">Test</button>
 <div id="y" style="display:none">Escape pressed!!</div>
 <script>
-document.getElementById('x').onclick = {
+document.getElementById('x').onclick = () => {
   document.body.requestFullscreen().then(() => {
     const keys = [{ code: 'Escape' }];
     navigator.keyboard.lock(keys);
